@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Copy the compiled JAR file to the Docker container
-COPY target/employee-management-system.jar app.jar
+COPY target/employee-management-system-app.jar app.jar
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "/app.jar"]
