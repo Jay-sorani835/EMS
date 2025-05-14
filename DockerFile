@@ -1,8 +1,14 @@
 # Use official OpenJDK image from Docker Hub
 FROM openjdk:17-jdk-slim
 
-# Copy the compiled JAR file to the Docker container
-COPY target/employee-management-system-app.jar app.jar
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the JAR file from the local target directory to the container's /app directory
+COPY target/employee-management-system-app.jar /app/app.jar
+
+# Expose the port the app runs on (optional but recommended for Dockerized applications)
+EXPOSE 8080
 
 # Run the JAR file
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
