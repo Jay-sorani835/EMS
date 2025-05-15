@@ -1,9 +1,10 @@
 package com.example.SpringBootCRUD;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = {"com.example.springbootcrud"})
-
+@SpringBootApplication
+@ComponentScan(basePackages = "com.example.SpringBootCRUD")
 public class SpringBootCrudApplication {
 
     public static void main(String[] args) {
