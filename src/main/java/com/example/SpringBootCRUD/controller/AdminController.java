@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = "https://ems-frontend-one-tawny.vercel.app/")
+@CrossOrigin(origins = "https://ems-frontend-one-tawny.vercel.app")
 public class AdminController {
 
 	@Autowired
