@@ -1,7 +1,6 @@
 package com.example.SpringBootCRUD.controller;
 
 import com.example.SpringBootCRUD.model.Admin;
-import com.example.SpringBootCRUD.model.ChangePassword;
 import com.example.SpringBootCRUD.model.Employee;
 
 import jakarta.servlet.http.HttpSession;
