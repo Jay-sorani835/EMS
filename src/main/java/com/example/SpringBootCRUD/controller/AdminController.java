@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+https://github.com/Jay-sorani835/EMS---Backend/edit/main/src/main/java/com/example/SpringBootCRUD/controller/AdminController.java
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin(origins = "https://ems-frontend-one-tawny.vercel.app")
