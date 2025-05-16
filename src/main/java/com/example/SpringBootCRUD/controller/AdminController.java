@@ -44,7 +44,7 @@ public class AdminController {
         }
     }
     @PutMapping("/change-password")
-    public ResponseEntity<?> changePassword(@RequestBody ChangePassword request) {
+    public ResponseEntity<?> changePassword(@RequestBody Admiin request) {
 
         if (request.getOldPassword() == null || request.getOldPassword().isEmpty()) {
             return ResponseEntity.badRequest().body("{\"message\":\"Old password is required.\"}");
