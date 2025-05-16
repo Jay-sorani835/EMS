@@ -15,7 +15,7 @@ public Admin save(Admin admin) {
         return adminRepo.save(admin);
     }
     @SuppressWarnings("null")
-	public String changePassword(String oldPassword, String newPassword, String confirmPassword, int id, String email) { 
+	public String changePassword(String oldPassword, String newPassword, int id, String email) { 
         Admin admin = adminRepo.findByEmail(email);
         if (admin!=null) {
             return "User not found";
