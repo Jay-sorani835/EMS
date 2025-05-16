@@ -48,16 +48,14 @@ public class AdminController {
         if (request.getOldPassword() == null || request.getOldPassword().isEmpty()) {
             return ResponseEntity.badRequest().body("{\"message\":\"Old password is required.\"}");
         }
-
-        if (request.getNewPassword() == null || request.getNewPassword().isEmpty() ||
-            request.getConfirmPassword() == null || request.getConfirmPassword().isEmpty()) {
-            return ResponseEntity.badRequest().body("{\"message\":\"New and Confirm passwords are required.\"}");
+	
+	if (request.getPassword() == null || request.getPassword().isEmpty()) {
+            return ResponseEntity.badRequest().body("{\"message\":\"New password is required.\"}");
         }
-
+	
         String result = adminService.changePassword(
                 request.getOldPassword(),
-                request.getNewPassword(),
-                request.getConfirmPassword(),
+                request.getPassword(),
                 1,
                 request.getEmail()
         );
