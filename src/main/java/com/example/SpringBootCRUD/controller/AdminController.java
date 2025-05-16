@@ -28,7 +28,11 @@ public class AdminController {
 		this.adminService = adminService;
     }
 
-
+	@PostMapping("/add")
+    public ResponseEntity<Admin> createEmployee(@RequestBody Admin admin) {
+        Admin saveAdmin = adminService.save(admin);
+        return ResponseEntity.ok(saveAdmin);
+    }
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Admin loginRequest) {
     	System.out.println("AdminRepository is: " + adminRepository); // should not be null
