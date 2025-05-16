@@ -11,8 +11,8 @@ public class AdminService {
     @Autowired
     private AdminRepo adminRepo;
 
-public Employee save(Employee emp) {
-        return repo.save(emp);
+public Admin save(Admin admin) {
+        return adminRepo.save(admin);
     }
     @SuppressWarnings("null")
 	public String changePassword(String oldPassword, String newPassword, String confirmPassword, int id, String email) { 
