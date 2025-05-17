@@ -22,7 +22,7 @@ public class Admin {
 	public String getNewPassword(){
 		return newPassword;
 	}
-	public String setNewPassword(String newPassword){
+	public void setNewPassword(String newPassword){
 		this.newPassword = newPassword;
 	}
 	public String getOldPassword() {
