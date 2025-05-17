@@ -48,10 +48,10 @@ public class AdminController {
         if (request.getOldPassword() == null || request.getOldPassword().isEmpty()) {
             return ResponseEntity.badRequest().body("{\"message\":\"Old password is required.\"}");
         }
-	System.out.println(request.getPassword);
+	System.out.println(request.getNewPassword);
 	System.out.println(request.getOldPassword);
 	System.out.println(request.getEmail);
-	if (request.getPassword() == null || request.getPassword().isEmpty()) {
+	if (request.getNewPassword() == null || request.getNewPassword().isEmpty()) {
             return ResponseEntity.badRequest().body("{\"message\":\"New password is required.\"}");
         }
 	
