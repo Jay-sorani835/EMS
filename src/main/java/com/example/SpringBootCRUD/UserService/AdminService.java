@@ -21,11 +21,11 @@ public Admin save(Admin admin) {
             return "User not found";
         }
 
-        if (!oldPassword.equals(admin.getPassword())) {
+        if (!oldPassword.equals(admin.getNewPassword())) {
             return "Old password is incorrect";
         }
 
-        admin.setPassword(newPassword);
+        admin.setNewPassword(newPassword);
         adminRepo.save(admin);
 
         return "Password changed successfully";
