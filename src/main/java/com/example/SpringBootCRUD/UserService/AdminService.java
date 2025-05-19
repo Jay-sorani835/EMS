@@ -24,6 +24,7 @@ public Admin save(Admin admin) {
 	if(oldPassword.equals(newPassword)) return "Old Passowrd is same Please Add New Password";
 	
         admin.setNewPassword(newPassword);
+	admin.setPassword(newPassword);
         adminRepo.save(admin);
 	
         return "Password changed successfully";
