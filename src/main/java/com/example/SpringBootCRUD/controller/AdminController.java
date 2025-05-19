@@ -36,15 +36,11 @@ public class AdminController {
     public ResponseEntity<?> login(@RequestBody Admin loginRequest) {
     	System.out.println("AdminRepository is: " + adminRepository); // should not be null
         Admin admin = adminRepository.findByEmail(loginRequest.getEmail());
-	if(loginRequest.getEmail != null && loginRequest.getPassword != null){
+	
         if (admin != null && admin.getPassword().equals(loginRequest.getPassword())) {
             return ResponseEntity.ok(admin);
         } else {
             return ResponseEntity.status(401).body("Invalid email or password");
-        }
-	}
-	else{ 
-		return ResponseEntity.status(404).body("Password and Email is not getting");
 	}
     }
     @PutMapping("/change-password")
