@@ -55,7 +55,7 @@ public class AdminController {
 	
         String result = adminService.changePassword(
                 request.getOldPassword(),
-                request.getPassword(),
+                request.getNewPassword(),
                 1,
                 request.getEmail()
         );
